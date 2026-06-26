@@ -144,3 +144,15 @@ async function fetchTopPosts() {
 // ─────────────────────────────────────────────
 
 fetchTopPosts();
+renderPosts([
+  {
+    post_id: "abc123",
+    title: "Test Post",
+    author: "testuser",
+    score: 100,
+    num_comments: 10,
+    url: "https://example.com",
+    permalink: "https://lobste.rs/s/abc123",
+    created_utc: 1716000000
+  }
+]);
