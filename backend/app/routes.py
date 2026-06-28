@@ -11,7 +11,7 @@ def health():
 
 @app.route("/api/posts/top")
 def top_posts():
-    limit = request.args.get("limit", 10)
+    limit = int(request.args.get("limit", 10))
     result = service.get_top_posts_for_api(limit)
     return jsonify(result), 200
 
