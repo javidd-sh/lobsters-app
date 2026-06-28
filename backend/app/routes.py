@@ -24,5 +24,5 @@ def get_post(post_id):
 
 @app.route("/api/stats")
 def stats():
-    result = service.get_stats()
+    result = service.get_stats_for_api()
     return jsonify(result), 200

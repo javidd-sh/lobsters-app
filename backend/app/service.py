@@ -21,7 +21,7 @@ def get_single_post_for_api(post_id):
         "data": post.to_dict()
     }
 
-def get_stats():
+def get_stats_for_api():
     count = repository.count_posts()
     avg = repository.get_average_score()
     return {
