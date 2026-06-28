@@ -2,7 +2,7 @@ from app import repository
 
 MAX_LIMIT = 50
 
-def get_top_posts(limit):
+def get_top_posts_for_api(limit):
     limit = max(1, min(int(limit), MAX_LIMIT))
     posts = repository.get_top_posts(limit)
     return {
