@@ -5,9 +5,11 @@ MAX_LIMIT = 50
 def get_top_posts_for_api(limit):
     limit = max(1, min(int(limit), MAX_LIMIT))
     posts = repository.get_top_posts(limit)
+    data = [p.to_dict() for p in posts]
     return {
         "success": True,
-        "data": [p.to_dict() for p in posts]
+        "count": len(data),
+        "data": data
     }
 
 def get_post_by_id(post_id):
