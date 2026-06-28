@@ -15,7 +15,7 @@ def get_top_posts_for_api(limit):
 def get_single_post_for_api(post_id):
     post = repository.get_post_by_id(post_id)
     if post is None:
-        return None
+        return {"success": False, "error": "Post tapılmadı"}
     return {
         "success": True,
         "data": post.to_dict()
