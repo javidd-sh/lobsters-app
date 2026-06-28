@@ -17,7 +17,7 @@ def top_posts():
 
 @app.route("/api/posts/<int:post_id>")
 def get_post(post_id):
-    result = service.get_post_by_id(post_id)
+   result = service.get_single_post_for_api(post_id)
     if result is None:
         return jsonify({"success": False, "error": "Post tapılmadı"}), 404
     return jsonify(result), 200

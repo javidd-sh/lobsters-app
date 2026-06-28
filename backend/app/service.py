@@ -12,7 +12,7 @@ def get_top_posts_for_api(limit):
         "data": data
     }
 
-def get_post_by_id(post_id):
+def get_single_post_for_api(post_id):
     post = repository.get_post_by_id(post_id)
     if post is None:
         return None
