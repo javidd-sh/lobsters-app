@@ -17,7 +17,7 @@ def get_post_by_id(post_id):
     finally:
         session.close()
 
-def get_total_count():
+def count_posts():
     session = get_session()
     try:
         return session.query(Post).count()

@@ -20,7 +20,7 @@ def get_post_by_id(post_id):
     }
 
 def get_stats():
-    count = repository.get_total_count()
+    count = repository.count_posts()
     avg = repository.get_average_score()
     return {
         "success": True,
