@@ -12,7 +12,7 @@ def get_top_posts(limit):
 def get_post_by_id(post_id):
     session = get_session()
     try:
-        post = session.query(Post).filter(Post.id == post_id).first()
+        post = session.query(Post).filter(Post.post_id == post_id).first()
         return post
     finally:
         session.close()
