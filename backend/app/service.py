@@ -23,7 +23,10 @@ def get_single_post_for_api(post_id):
 
 def get_stats_for_api():
     count = repository.count_posts()
-    avg = repository.get_average_score()
+    try:
+        avg = repository.get_average_score()
+    except Exception:
+        avg = 0
     return {
         "success": True,
         "data": {
